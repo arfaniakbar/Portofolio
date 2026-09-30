@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Muhammad Arfani Akbar</title>
+  <meta name="description"
+    content="Portfolio resmi Muhammad Arfani Akbar - Frontend Developer & Web Developer berbasis di Banjarmasin, Kalimantan Selatan, Indonesia." />
+  <meta name="keywords"
+    content="Muhammad Arfani Akbar, Frontend Developer, Web Developer, Portfolio, Banjarmasin, Kalimantan Selatan, Frontend, JavaScript, React" />
+  <meta name="author" content="Muhammad Arfani Akbar" />
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Muhammad Arfani Akbar | Portfolio" />
+  <meta property="og:description"
+    content="Frontend Developer & Web Developer yang berfokus membangun antarmuka web modern, performa tinggi, dan pengalaman pengguna terbaik berbasis di Banjarmasin." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Ambient Glowing Background Canvas & Orbs -->
+  <div class="ambient-glow">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <!-- Top Scroll Reading Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Sleek Floating Navbar -->
+  <header class="navbar-wrapper" id="navbarWrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#beranda" class="nav-brand" aria-label="Beranda">
+        <span class="brand-avatar">A</span>
+        <span class="brand-name">Akbar<span class="accent-dot"></span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="#beranda" class="nav-link active">Beranda</a></li>
+        <li class="nav-item"><a href="#tentang" class="nav-link">Tentang</a></li>
+        <li class="nav-item"><a href="#keahlian" class="nav-link">Keahlian</a></li>
+        <li class="nav-item"><a href="#proyek" class="nav-link">Proyek</a></li>
+        <li class="nav-item"><a href="#pengalaman" class="nav-link">Pengalaman</a></li>
+        <li class="nav-item"><a href="#sertifikat" class="nav-link">Sertifikat</a></li>
+        <li class="nav-item"><a href="#kontak" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Ganti Tema">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+        <a href="#kontak" class="nav-cta-btn">
+          <span>Mari Bicara</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle-btn" id="mobileToggle" aria-label="Buka Menu Navigasi">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Navigation Overlay Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-content">
+      <ul class="mobile-nav-links">
+        <li><a href="#beranda" class="mobile-link"><span>01</span> Beranda</a></li>
+        <li><a href="#tentang" class="mobile-link"><span>02</span> Tentang Saya</a></li>
+        <li><a href="#keahlian" class="mobile-link"><span>03</span> Keahlian &amp; Tools</a></li>
+        <li><a href="#proyek" class="mobile-link"><span>04</span> Proyek Pilihan</a></li>
+        <li><a href="#pengalaman" class="mobile-link"><span>05</span> Pengalaman &amp; Edukasi</a></li>
+        <li><a href="#sertifikat" class="mobile-link"><span>06</span> Sertifikat</a></li>
+        <li><a href="#kontak" class="mobile-link"><span>07</span> Kontak</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="mailto:arfaniakbar99@gmail.com" class="mobile-email-link">
+          <i class="fa-regular fa-envelope"></i> arfaniakbar99@gmail.com
+        </a>
+        <div class="mobile-socials">
+          <a href="https://github.com/arfaniakbar" target="_blank" rel="noopener" aria-label="GitHub"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/muhammad-arfani-akbar-383b35369?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/arfaniakbar_" target="_blank" rel="noopener" aria-label="Instagram"><i
+              class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="beranda">
+      <div class="container hero-container">
+        <div class="hero-content">
+
+          <!-- Hero Headline -->
+          <h1 class="hero-title animate-fade-in delay-1">
+            Membangun Pengalaman Web yang <span class="text-gradient">Elegan, Cepat</span> &amp; Solutif.
+          </h1>
+
+          <!-- Hero Subtitle -->
+          <p class="hero-description animate-fade-in delay-2">
+            Halo! Saya <strong>Muhammad Arfani Akbar</strong>, seorang Frontend Developer &amp; Web Developer asal
+            <strong>Banjarmasin, Kalimantan Selatan</strong>. Saya fokus membangun antarmuka web yang modern, responsif,
+            dan memberikan pengalaman pengguna terbaik.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions animate-fade-in delay-3">
+            <a href="#proyek" class="btn btn-primary magnetic-btn">
+              <span>Lihat Karya Saya</span>
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </a>
+            <a href="#kontak" class="btn btn-secondary magnetic-btn">
+              <span>Hubungi Saya</span>
+              <i class="fa-regular fa-paper-plane"></i>
+            </a>
+            <a href="https://github.com/ArfaniAkbar" target="_blank" rel="noopener" class="btn btn-ghost"
+              aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+
+
+        </div>
+
+        <!-- Hero Visual / Floating Profile Card -->
+        <div class="hero-visual animate-fade-in delay-2">
+          <div class="profile-card-3d" id="profileCard">
+            <div class="profile-card-inner">
+              <div class="profile-avatar-wrapper">
+                <div class="profile-avatar-glow"></div>
+                <div class="profile-avatar-circle">
+                  <span class="avatar-initials">AA</span>
+                </div>
+              </div>
+
+              <div class="profile-info-text">
+                <h3 class="profile-name">Muhammad Arfani Akbar</h3>
+                <p class="profile-tagline">Frontend Developer &amp; Web Developer</p>
+                <div class="profile-location">
+                  <i class="fa-solid fa-location-dot"></i> Banjarmasin, Kalimantan Selatan
+                </div>
+              </div>
+
+              <div class="profile-tags">
+                <span class="profile-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="profile-tag"><i class="fa-brands fa-react"></i> React</span>
+                <span class="profile-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="profile-tag"><i class="fa-solid fa-wind"></i> Tailwind</span>
+              </div>
+
+              <!-- Floating Micro Badges -->
+              <div class="floating-badge badge-top-right">
+                <i class="fa-solid fa-code"></i> Clean Code
+              </div>
+              <div class="floating-badge badge-bottom-left">
+                <i class="fa-solid fa-shield-halved"></i> Fast &amp; Secure
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#tentang" class="scroll-down-hint" aria-label="Gulir ke bawah">
+        <span>Scroll</span>
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ==================== TENTANG SAYA (BENTO GRID) ==================== -->
+    <section class="section-padding" id="tentang">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll">
+          <span class="section-pill">Tentang Saya</span>
+          <h2 class="section-title">Dedikasi Pada Kualitas &amp; Kepuasan Pengguna</h2>
+          <p class="section-subtitle">Mengenal lebih dekat latar belakang, filosofi kerja, dan komitmen profesional
+            saya.</p>
+        </div>
+
+        <!-- Bento Grid Layout -->
+        <div class="bento-grid">
+          <!-- Bento 1: Main Bio Card -->
+          <div class="bento-card bento-span-2 reveal-on-scroll">
+            <div class="bento-card-bg"></div>
+            <div class="bento-icon-box">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h3 class="bento-title">Siapa Saya?</h3>
+            <p class="bento-text">
+              Saya seorang lulusan <strong>Politeknik Negeri Banjarmasin</strong> jurusan <strong>Teknik
+                Informatika</strong> dengan minat mendalam pada pengembangan <strong>Frontend &amp; Web
+                Development</strong>. Saya terbiasa memecahkan masalah secara sistematis, merancang antarmuka UI/UX yang
+              rapi dan intuitif, serta membangun arsitektur kode yang bersih dan mudah dirawat.
+            </p>
+            <p class="bento-text">
+              Melalui pengalaman magang dan proyek di perusahaan telekomunikasi terkemuka seperti <strong>PT Telkom
+                Akses</strong> dan lembaga penyiaran publik <strong>RRI Banjarmasin</strong>, saya memiliki kedisiplinan
+              kerja yang tinggi, kebiasaan troubleshooting yang cepat, serta kemampuan komunikasi tim yang solid.
+            </p>
+          </div>
+
+          <!-- Bento 2: Lokasi & Ketersediaan -->
+          <div class="bento-card reveal-on-scroll delay-1">
+            <div class="bento-card-bg"></div>
+            <div class="bento-icon-box">
+              <i class="fa-solid fa-map-pin"></i>
+            </div>
+            <h3 class="bento-title">Lokasi &amp; Fleksibilitas</h3>
+            <p class="bento-text">
+              Berbasis di <strong>Banjarmasin, Kalimantan Selatan (GMT+8 / WITA)</strong>.
+            </p>
+            <div class="bento-location-pill">
+              <span class="live-dot"></span> Waktu Lokal: <span id="localTimeDisplay">--:-- WITA</span>
+            </div>
+          </div>
+
+          <!-- Bento 3: Filosofi Kerja -->
+          <div class="bento-card reveal-on-scroll">
+            <div class="bento-card-bg"></div>
+            <div class="bento-icon-box">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3 class="bento-title">Prinsip Kerja</h3>
+            <ul class="bento-list">
+              <li><i class="fa-solid fa-check"></i> <strong>User-Centric:</strong> Fokus pada kenyamanan dan kemudahan
+                pengguna akhir.</li>
+              <li><i class="fa-solid fa-check"></i> <strong>Clean &amp; Maintainable:</strong> Kode tersusun rapi dengan
+                standar industri.</li>
+              <li><i class="fa-solid fa-check"></i> <strong>Performa Maksimal:</strong> Loading cepat, ringan, dan
+                responsif di semua layar.</li>
+            </ul>
+          </div>
+
+          <!-- Bento 4: Kolaborasi & Soft Skills -->
+          <div class="bento-card bento-span-2 reveal-on-scroll delay-1">
+            <div class="bento-card-bg"></div>
+            <div class="bento-icon-box">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 class="bento-title">Keahlian Pendukung &amp; Nilai Tambah</h3>
+            <p class="bento-text">
+              Bukan hanya sekadar coding, saya mengedepankan pemahaman bisnis, komunikasi transparan, adaptasi teknologi
+              baru secara mandiri, dan kemampuan manajemen waktu yang terstruktur.
+            </p>
+            <div class="soft-skills-wrapper">
+              <span class="soft-pill"><i class="fa-solid fa-comments"></i> Komunikasi Jelas</span>
+              <span class="soft-pill"><i class="fa-solid fa-bolt"></i> Problem Solving</span>
+              <span class="soft-pill"><i class="fa-solid fa-users"></i> Kerja Sama Tim</span>
+              <span class="soft-pill"><i class="fa-solid fa-clock"></i> Disiplin Waktu</span>
+              <span class="soft-pill"><i class="fa-solid fa-book-open"></i> Pembelajar Cepat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== KEAHLIAN & TEKNOLOGI ==================== -->
+    <section class="section-padding bg-subtle" id="keahlian">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll">
+          <span class="section-pill">Stack Teknologi</span>
+          <h2 class="section-title">Keahlian &amp; Perangkat yang Saya Kuasai</h2>
+          <p class="section-subtitle">Alat dan teknologi terkini yang saya gunakan sehari-hari untuk menghidupkan ide
+            menjadi produk nyata.</p>
+        </div>
+
+        <!-- Skills Filter Tabs -->
+        <div class="skills-filter-container reveal-on-scroll">
+          <div class="skills-filter-tabs">
+            <button class="skill-tab-btn active" data-filter="all">Semua Teknologi</button>
+            <button class="skill-tab-btn" data-filter="frontend">Frontend Web</button>
+            <button class="skill-tab-btn" data-filter="network">Jaringan &amp; Sistem</button>
+            <button class="skill-tab-btn" data-filter="tools">Tools &amp; Workflow</button>
+          </div>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Frontend -->
+          <div class="skill-card reveal-on-scroll" data-category="frontend">
+            <div class="skill-icon-wrap html-color"><i class="fa-brands fa-html5"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">HTML5</h4>
+              <span class="skill-level">Struktur Semantik &amp; Aksesibilitas</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-on-scroll" data-category="frontend">
+            <div class="skill-icon-wrap css-color"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">CSS3 &amp; Flex/Grid</h4>
+              <span class="skill-level">Modern Styling, Animasi &amp; Responsif</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-on-scroll" data-category="frontend">
+            <div class="skill-icon-wrap js-color"><i class="fa-brands fa-square-js"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">JavaScript (ES6+)</h4>
+              <span class="skill-level">Interaktivitas Modern &amp; Manipulasi DOM</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-on-scroll" data-category="frontend">
+            <div class="skill-icon-wrap tailwind-color"><i class="fa-solid fa-wind"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">Tailwind CSS</h4>
+              <span class="skill-level">Utility-First Modern CSS Framework</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-on-scroll" data-category="frontend">
+            <div class="skill-icon-wrap bootstrap-color"><i class="fa-brands fa-bootstrap"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">Bootstrap 5</h4>
+              <span class="skill-level">Rapid UI Prototyping &amp; Grid System</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-on-scroll" data-category="frontend">
+            <div class="skill-icon-wrap react-color"><i class="fa-brands fa-react"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">React.js</h4>
+              <span class="skill-level">Component-Based Single Page Apps</span>
+            </div>
+          </div>
+
+
+
+          <!-- Networking -->
+          <div class="skill-card reveal-on-scroll" data-category="network">
+            <div class="skill-icon-wrap mikrotik-color"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">MikroTik RouterOS</h4>
+              <span class="skill-level">Routing, Bandwidth Queue, Hotspot &amp; Firewall</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-on-scroll" data-category="network">
+            <div class="skill-icon-wrap cisco-color"><i class="fa-solid fa-server"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">Cisco Networking</h4>
+              <span class="skill-level">VLAN, Subnetting, Switching &amp; Topology</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-on-scroll" data-category="network">
+            <div class="skill-icon-wrap fiber-color"><i class="fa-solid fa-bolt"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">Fiber Optic &amp; FTTH</h4>
+              <span class="skill-level">Splicing, ODP/OTB Management, Redaman Testing</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-card reveal-on-scroll" data-category="tools">
+            <div class="skill-icon-wrap git-color"><i class="fa-brands fa-git-alt"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">Git &amp; GitHub</h4>
+              <span class="skill-level">Version Control, Branching &amp; Collaboration</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-on-scroll" data-category="tools">
+            <div class="skill-icon-wrap figma-color"><i class="fa-brands fa-figma"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">Figma</h4>
+              <span class="skill-level">UI/UX Wireframing &amp; Design Translation</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-on-scroll" data-category="tools">
+            <div class="skill-icon-wrap vscode-color"><i class="fa-solid fa-code"></i></div>
+            <div class="skill-details">
+              <h4 class="skill-name">VS Code &amp; DevTools</h4>
+              <span class="skill-level">Productive Coding &amp; Performance Profiling</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROYEK UNGGULAN ==================== -->
+    <section class="section-padding" id="proyek">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll">
+          <span class="section-pill">Hasil Karya</span>
+          <h2 class="section-title">Proyek Pilihan yang Pernah Saya Bangun</h2>
+          <p class="section-subtitle">Kombinasi fungsionalitas, performa tinggi, dan tampilan antarmuka yang ramah
+            pengguna.</p>
+        </div>
+
+        <!-- Projects List / Grid -->
+        <div class="projects-container">
+          <!-- Project 1: Wastescan -->
+          <article class="project-card reveal-on-scroll">
+            <div class="project-media-wrap">
+              <img src="assets/projects/project-1.jpg" alt="Aplikasi Web Wastescan" class="project-img"
+                loading="lazy" />
+              <div class="project-overlay">
+                <span class="project-badge">Web Application</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-meta">
+                <span class="project-category"><i class="fa-solid fa-recycle"></i> AI &amp; Smart Waste</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">Wastescan — IoT</h3>
+              <p class="project-summary">
+                Aplikasi berbasis web yang membantu pengguna mengidentifikasi jenis sampah Medis dan Nonmedis yang
+                masuk ke bak sampah buatan secara real-time guna mendukung pengelolaan daur ulang lingkungan yang lebih
+                efisien dan terstruktur.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Tensorflow</span>
+                <span class="tech-tag">Raspberry pi</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://wastescan.site" target="_blank" rel="noopener" class="project-link-btn"
+                  aria-label="Preview Proyek Wastescan">
+                  <span>Preview Proyek</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: IBS Komputer -->
+          <article class="project-card reveal-on-scroll delay-1">
+            <div class="project-media-wrap">
+              <img src="assets/projects/project-2.jpg" alt="Website Toko IBS Komputer" class="project-img"
+                loading="lazy" />
+              <div class="project-overlay">
+                <span class="project-badge">E-Commerce &amp; Services</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header-meta">
+                <span class="project-category"><i class="fa-solid fa-store"></i> Toko Komputer &amp; Servis</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">IBS Komputer — Platform Katalog &amp; Layanan Servis</h3>
+              <p class="project-summary">
+                Website interaktif untuk toko perangkat komputer di Banjarmasin, dilengkapi fitur katalog produk
+                sparepart PC/laptop, estimasi perbaikan servis, dan integrasi pemesanan langsung ke WhatsApp customer
+                service.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://arfaniakbar.github.io/IBSKomputer/" target="_blank" rel="noopener"
+                  class="project-link-btn" aria-label="Preview Proyek IBS Komputer">
+                  <span>Preview Proyek</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- GitHub Callout Card -->
+        <div class="github-callout-card reveal-on-scroll">
+          <div class="callout-icon"><i class="fa-brands fa-github"></i></div>
+          <div class="callout-text">
+            <h4>Ingin melihat eksplorasi kode dan repositori lainnya?</h4>
+            <p>Jelajahi seluruh repositori proyek terbuka dan eksperimen web saya di GitHub.</p>
+          </div>
+          <a href="https://github.com/ArfaniAkbar" target="_blank" rel="noopener" class="btn btn-secondary">
+            <span>Buka Profil GitHub</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PENGALAMAN & PENDIDIKAN ==================== -->
+    <section class="section-padding bg-subtle" id="pengalaman">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll">
+          <span class="section-pill">Rekam Jejak</span>
+          <h2 class="section-title">Pengalaman Kerja &amp; Latar Belakang Pendidikan</h2>
+          <p class="section-subtitle">Perjalanan profesional saya dalam mengasah keterampilan teknis di lapangan nyata.
+          </p>
+        </div>
+
+        <!-- Two Column Timeline -->
+        <div class="experience-education-grid">
+          <!-- Column 1: Pengalaman Kerja -->
+          <div class="timeline-column reveal-on-scroll">
+            <div class="timeline-col-header">
+              <div class="col-icon-wrap"><i class="fa-solid fa-briefcase"></i></div>
+              <h3>Pengalaman Kerja &amp; Praktik</h3>
+            </div>
+
+            <div class="timeline-list">
+              <!-- Item 1: PT Telkom Akses -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta">
+                    <span class="timeline-time"><i class="fa-regular fa-calendar"></i> 2025</span>
+                    <span class="timeline-badge">Praktik Kerja Lapangan</span>
+                  </div>
+                  <h4 class="timeline-role">Entry Data &amp; Pembuatan Project</h4>
+                  <h5 class="timeline-company"><i class="fa-solid fa-building"></i> PT Telkom Akses Banjarmasin</h5>
+                  <p class="timeline-desc">
+                    Melakukan penginputan data pelanggan indihome ke dalam sistem telkom akses
+                    dan pembuatan project penginputan data evidence pekerjaan.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2: RRI Banjarmasin -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta">
+                    <span class="timeline-time"><i class="fa-regular fa-calendar"></i> 2022</span>
+                    <span class="timeline-badge">Magang / PKL</span>
+                  </div>
+                  <h4 class="timeline-role">IT Support &amp; Broadcast Operations</h4>
+                  <h5 class="timeline-company"><i class="fa-solid fa-radio"></i> RRI Banjarmasin</h5>
+                  <p class="timeline-desc">
+                    Pemeliharaan hardware/software komputer operasional siaran, serta membantu
+                    monitoring streaming siaran radio.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 3: Warko ID / Freelance -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta">
+                    <span class="timeline-time"><i class="fa-regular fa-calendar"></i> 2022</span>
+                    <span class="timeline-badge">Magang / PKL</span>
+                  </div>
+                  <h4 class="timeline-role">Digital Marketing</h4>
+                  <h5 class="timeline-company"><i class="fa-solid fa-laptop-code"></i> Warko ID</h5>
+                  <p class="timeline-desc">
+                    Memantau harga dan stok di aplikasi web hingga pembuatan iklan
+                    pada produk makanan cepat saji yang ada di minimarket.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Pendidikan & Kualifikasi -->
+          <div class="timeline-column reveal-on-scroll delay-1">
+            <div class="timeline-col-header">
+              <div class="col-icon-wrap"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h3>Riwayat Pendidikan</h3>
+            </div>
+
+            <div class="timeline-list">
+              <!-- Pendidikan 1: Politeknik Negeri Banjarmasin -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta">
+                    <span class="timeline-time"><i class="fa-regular fa-calendar"></i> 2026</span>
+                    <span class="timeline-badge success">Lulus</span>
+                  </div>
+                  <h4 class="timeline-role">Teknik Informatika</h4>
+                  <h5 class="timeline-company"><i class="fa-solid fa-school"></i> Politeknik Negeri Banjarmasin</h5>
+                  <p class="timeline-desc">
+                    Secara aktif memperdalam ekosistem Web Modern (Laravel, JavaScript modern, React, API integration)
+                    serta standar sertifikasi industri IT secara konsisten.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Pendidikan 2: SMKS Bina Banua Banjarmasin -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <div class="timeline-meta">
+                    <span class="timeline-time"><i class="fa-regular fa-calendar"></i> 2023</span>
+                    <span class="timeline-badge success">Lulus</span>
+                  </div>
+                  <h4 class="timeline-role">Teknik Komputer dan Jaringan</h4>
+                  <h5 class="timeline-company"><i class="fa-solid fa-school"></i> SMKS Bina Banua Banjarmasin</h5>
+                  <p class="timeline-desc">
+                    Mempelajari arsitektur jaringan komputer (Cisco &amp; MikroTik),
+                    instalasi infrastruktur fiber optik, dan dasar-dasar pemrograman web.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERTIFIKAT & PENGHARGAAN ==================== -->
+    <section class="section-padding" id="sertifikat">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll">
+          <span class="section-pill">Validasi Kompetensi</span>
+          <h2 class="section-title">Sertifikat &amp; Lisensi Resmi</h2>
+          <p class="section-subtitle">Bukti kompetensi dan komitmen saya dalam terus meningkatkan standar keahlian
+            teknis.</p>
+        </div>
+
+        <!-- Certificate Cards Grid -->
+        <div class="cert-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card reveal-on-scroll" data-cert="assets/certificates/cert-1.jpg"
+            data-title="Sertifikat Junior Network Administrator">
+            <div class="cert-img-wrap">
+              <img src="assets/certificates/cert-1.jpg" alt="Sertifikat 1" class="cert-thumb" loading="lazy" />
+              <div class="cert-zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span>Ketuk untuk Memperbesar</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-category"><i class="fa-solid fa-award"></i>Kompetensi Resmi</span>
+              <h4 class="cert-name">Sertifikat Junior Network Administrator</h4>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card reveal-on-scroll delay-1" data-cert="assets/certificates/cert-2.jpg"
+            data-title="Sertifikat AI Upskilling Program">
+            <div class="cert-img-wrap">
+              <img src="assets/certificates/cert-2.jpg" alt="Sertifikat 2" class="cert-thumb" loading="lazy" />
+              <div class="cert-zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span>Ketuk untuk Memperbesar</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-category"><i class="fa-solid fa-award"></i>Kompetensi Resmi</span>
+              <h4 class="cert-name">Sertifikat AI Upskilling Program</h4>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card reveal-on-scroll delay-2" data-cert="assets/certificates/cert-3.jpg"
+            data-title="Sertifikat Project Problem Based Learning">
+            <div class="cert-img-wrap">
+              <img src="assets/certificates/cert-3.jpg" alt="Sertifikat 3" class="cert-thumb" loading="lazy" />
+              <div class="cert-zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span>Ketuk untuk Memperbesar</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-category"><i class="fa-solid fa-award"></i>Kompetensi Resmi</span>
+              <h4 class="cert-name">Sertifikat Project Problem Based Learning</h4>
+            </div>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="cert-card reveal-on-scroll delay-3" data-cert="assets/certificates/cert-4.jpg"
+            data-title="Sertifikat Roadshow 1000 Startup Digital">
+            <div class="cert-img-wrap">
+              <img src="assets/certificates/cert-4.jpg" alt="Sertifikat 4" class="cert-thumb" loading="lazy" />
+              <div class="cert-zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                <span>Ketuk untuk Memperbesar</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-category"><i class="fa-solid fa-award"></i>Kompetensi Resmi</span>
+              <h4 class="cert-name">Sertifikat Roadshow 1000 Startup Digital</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HUBUNGI SAYA (KONTAK) ==================== -->
+    <section class="section-padding bg-subtle" id="kontak">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll">
+          <span class="section-pill">Mulai Kolaborasi</span>
+          <h2 class="section-title">Punya Ide Proyek Menarik? Mari Wujudkan Bersama</h2>
+          <p class="section-subtitle">Saya selalu antusias mendiskusikan peluang kerja, proyek freelance, atau sekadar
+            berbagi wawasan IT.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Interactive Direct Message Form -->
+          <div class="contact-form-card reveal-on-scroll">
+            <h3 class="form-title">Kirim Pesan Cepat</h3>
+            <p class="form-subtitle">Formulir ini terhubung langsung untuk mengirimkan pesan ke email saya secara
+              instan.
+            </p>
+
+            <form id="contactForm" class="direct-contact-form">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Nama Lengkap</label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-user"></i>
+                  <input type="text" id="senderName" name="name" class="form-input" placeholder="Misal: Budi Santoso"
+                    required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">Alamat Email</label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-envelope"></i>
+                  <input type="email" id="senderEmail" name="email" class="form-input" placeholder="nama@email.com"
+                    required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderSubject" class="form-label">Subjek / Topik</label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-bookmark"></i>
+                  <input type="text" id="senderSubject" name="subject" class="form-input"
+                    placeholder="Tawaran Kerjasama / Proyek Website" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">Isi Pesan</label>
+                <textarea id="senderMessage" name="message" class="form-textarea" rows="4"
+                  placeholder="Ceritakan detail proyek atau pertanyaan Anda di sini..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block magnetic-btn" id="submitBtn">
+                <span>Kirim Pesan Sekarang</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#beranda" class="footer-logo">
+            <span class="brand-avatar">A</span>
+            <span class="brand-name">Muhammad Arfani Akbar</span>
+          </a>
+          <p class="footer-tagline">
+            Membangun website modern, andal, dan memikat dengan standar estetika tinggi.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <h4 class="footer-heading">Navigasi Cepat</h4>
+          <ul class="footer-links">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang Saya</a></li>
+            <li><a href="#keahlian">Keahlian</a></li>
+            <li><a href="#proyek">Proyek Pilihan</a></li>
+            <li><a href="#pengalaman">Pengalaman</a></li>
+            <li><a href="#sertifikat">Sertifikat</a></li>
+            <li><a href="#kontak">Hubungi Saya</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social-section">
+          <h4 class="footer-heading">Terhubung</h4>
+          <div class="footer-social-links">
+            <a href="https://github.com/arfaniakbar" target="_blank" rel="noopener" aria-label="GitHub"><i
+                class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/muhammad-arfani-akbar-383b35369?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/arfaniakbar_" target="_blank" rel="noopener" aria-label="Instagram"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:arfaniakbar99@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> <strong>Muhammad Arfani Akbar</strong>. Hak Cipta Dilindungi.
+        </p>
+        <button class="back-to-top-btn" id="backToTopBtn" aria-label="Kembali ke atas">
+          <span>Ke Atas</span>
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CERTIFICATE LIGHTBOX MODAL ==================== -->
+  <div class="cert-modal" id="certModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Tutup Pratinjau">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-img-container">
+        <img src="" alt="Pratinjau Sertifikat" id="modalCertImg" class="modal-cert-img" />
+      </div>
+      <div class="modal-caption" id="modalCaption">Judul Sertifikat</div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification">
+    <div class="toast-icon"><i class="fa-solid fa-check"></i></div>
+    <div class="toast-content">
+      <h5 class="toast-title" id="toastTitle">Berhasil</h5>
+      <p class="toast-message" id="toastMessage">Email berhasil disalin ke clipboard!</p>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>
