@@ -922,7 +922,11 @@ html.light .profile-tag {
 .badge-top-right {
     top: -12px;
     right: -10px;
-    color: var(--accent-sky);
+    color: #38bdf8;
+}
+
+html.light .badge-top-right {
+    color: #0284c7;
 }
 
 .badge-bottom-left {
@@ -2477,7 +2481,7 @@ html.light .form-textarea {
     }
 
     .profile-card-inner {
-        padding: 2rem 1.25rem;
+        padding: 2rem 1.25rem 3rem;
     }
 
     .bento-text,
