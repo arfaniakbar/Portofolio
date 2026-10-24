@@ -2558,7 +2558,7 @@ html.light .form-textarea {
 
     /* 2 Clean columns for skills on mobile */
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0.75rem;
     }
 
@@ -2699,5 +2699,55 @@ html.light .form-textarea {
 @media (min-height: 1400px) {
     .hero-section {
         min-height: min(100vh, 900px);
+    }
+}
+
+/* --- FIX: NAVBAR & HERO DI MODE DESKTOP PADA HP/TABLET (layar sentuh) --- */
+@media (pointer: coarse) and (min-width: 869px) and (max-width: 1280px) {
+    /* Hilangkan tombol "Mari Bicara" agar navbar tidak sesak */
+    .nav-cta-btn {
+        display: none;
+    }
+
+    .navbar {
+        padding: 0 1rem;
+    }
+
+    .nav-menu {
+        gap: 0.1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.875rem;
+    }
+
+    .nav-actions {
+        gap: 0.5rem;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 869px) {
+    /* Rapatkan hero ke atas: tinggi mengikuti konten, bukan viewport */
+    .hero-section {
+        min-height: 0;
+        align-items: flex-start;
+        padding-top: calc(var(--nav-height) + 3.5rem);
+        padding-bottom: 8rem;
+    }
+}
+
+/* --- FIX: HP layar sangat kecil (<=360px) --- */
+.skill-details {
+    min-width: 0;
+}
+
+.skill-name {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 360px) {
+    .skills-grid {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
