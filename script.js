@@ -172,24 +172,55 @@ document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
+  let navLockId = null;
+  let navLockTimer = null;
+
+  function setActiveNav(id) {
+    navLinks.forEach((link) => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+    });
+  }
+
   function highlightActiveNavLink() {
+    // Saat user baru klik menu, pertahankan menu yang diklik sampai scroll selesai
+    if (navLockId) {
+      setActiveNav(navLockId);
+      clearTimeout(navLockTimer);
+      navLockTimer = setTimeout(() => { navLockId = null; highlightActiveNavLink(); }, 180);
+      return;
+    }
+
     const scrollPos = window.scrollY + 140;
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+
+    // Di ujung halaman, section terakhir (Kontak) tidak bisa mencapai atas layar
+    // (terutama di layar tinggi / mode desktop HP), jadi paksa aktif.
+    if (atBottom && sections.length) {
+      setActiveNav(sections[sections.length - 1].getAttribute('id'));
+      return;
+    }
 
     sections.forEach((section) => {
       const top = section.offsetTop;
       const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-
       if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach((link) => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
-        });
+        setActiveNav(section.getAttribute('id'));
       }
     });
   }
+
+  // Klik menu navbar -> langsung tandai menu tersebut
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href') || '';
+      if (href.startsWith('#') && href.length > 1) {
+        navLockId = href.slice(1);
+        setActiveNav(navLockId);
+        clearTimeout(navLockTimer);
+        navLockTimer = setTimeout(() => { navLockId = null; highlightActiveNavLink(); }, 900);
+      }
+    });
+  });
 
   window.addEventListener('scroll', highlightActiveNavLink, { passive: true });
 
